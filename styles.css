@@ -1,0 +1,77 @@
+/* Farbverlauf-Hintergrund für das gesamte Body */
+body {
+    background: linear-gradient(45deg, #6b73ff 0%, #000dff 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff; /* Standardtextfarbe für besseren Kontrast */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Standard-Schriftart */
+    scroll-behavior: smooth; /* Sanftes Scrollen */
+}
+
+/* Keyframes für Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Keyframes für Slide-In-Animation */
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Keyframes für Grow-On-Scroll-Animation */
+@keyframes growOnScroll {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* Animations-Klassen */
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.slide-in-up {
+    animation: slideInUp 1s ease-out;
+}
+
+.grow-on-scroll {
+    animation: growOnScroll 1s ease-out;
+}
+
+/* Hintergrund für Footer und Container mit Durchscheinen des Farbverlaufs */
+.bg-white-transparent {
+    background-color: rgba(255, 255, 255, 0.6); /* Weiß mit 60% Opazität für leichten Durchblick */
+}
+
+/* Stärkere Transparenz für den Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.4); /* Weiß mit 40% Opazität für stärkeren Durchblick */
+}
+
+/* Fixierung des Headers beim Scrollen */
+.header-fixed {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Sicherstellen, dass es über anderen Inhalten liegt */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Sanfte Übergänge für die Sichtbarkeit */
+}
+
+/* Sichtbarkeit des Headers beim Scrollen */
+.header-hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.header-show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Links beim Hover Schwarz für bessere Sichtbarkeit */
+a {
+    color: #000; /* Schwarz für Links beim Hover */
+    text-decoration: none; /* Optional: Entfernen der Unterstreichung bei Links */
+}
