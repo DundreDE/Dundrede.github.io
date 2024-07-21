@@ -14,6 +14,7 @@
             <h1 class="text-2xl font-bold text-gray-800">My Portfolio</h1>
             <nav>
                 <ul class="flex space-x-4">
+                    <li><a href="#home" class="text-gray-600 hover:text-gray-500">Home</a></li>
                     <li><a href="#about" class="text-gray-600 hover:text-blue-500">About</a></li>
                     <li><a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a></li>
                 </ul>
@@ -39,17 +40,52 @@
         <div class="text-center slide-in-up">
             <h2 class="text-3xl font-bold">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+                <!-- Project 1 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal1')">
                     <h3 class="text-xl font-bold">Project 1</h3>
-                    <p class="mt-2">Description of the project goes here.</p>
+                    <p class="mt-2">A brief overview of Project 1.</p>
                 </div>
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+
+                <!-- Modal 1 -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <h3 class="text-xl font-bold">Project 1</h3>
+                        <img src="path/to/project1-image.jpg" alt="Project 1" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>Detailed description of Project 1. This includes the project's goals, technologies used, challenges faced, and any other relevant information. The project aims to demonstrate the integration of various technologies and skills.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal2')">
                     <h3 class="text-xl font-bold">Project 2</h3>
-                    <p class="mt-2">Description of the project goes here.</p>
+                    <p class="mt-2">A brief overview of Project 2.</p>
                 </div>
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+
+                <!-- Modal 2 -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <h3 class="text-xl font-bold">Project 2</h3>
+                        <img src="path/to/project2-image.jpg" alt="Project 2" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>Detailed description of Project 2. This includes the project's goals, technologies used, challenges faced, and any other relevant information. The project showcases advanced features and design principles.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal3')">
                     <h3 class="text-xl font-bold">Project 3</h3>
-                    <p class="mt-2">Description of the project goes here.</p>
+                    <p class="mt-2">A brief overview of Project 3.</p>
+                </div>
+
+                <!-- Modal 3 -->
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <h3 class="text-xl font-bold">Project 3</h3>
+                        <img src="path/to/project3-image.jpg" alt="Project 3" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>Detailed description of Project 3. This includes the project's goals, technologies used, challenges faced, and any other relevant information. The project is aimed at showcasing complex functionalities and user experience design.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,36 +98,21 @@
     </footer>
 
     <script>
-        // Entfernen des Fragmentteils der URL beim Laden der Seite
+        // JavaScript für Scroll-Effekte
         document.addEventListener('DOMContentLoaded', function () {
-            if (window.location.hash) {
-                history.replaceState(null, null, window.location.pathname + window.location.search);
-            }
-
-            // Header-Scroll-Verhalten
             const header = document.getElementById('header');
             let lastScrollTop = 0;
-
-            function checkScroll() {
+            window.addEventListener('scroll', function() {
                 let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-                if (currentScroll === 0) {
-                    header.classList.add('header-hide');
-                } else if (currentScroll > lastScrollTop) {
+                if (currentScroll > lastScrollTop) {
                     header.classList.remove('header-show');
                     header.classList.add('header-hide');
                 } else {
                     header.classList.remove('header-hide');
                     header.classList.add('header-show');
                 }
-
                 lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-            }
-
-            window.addEventListener('scroll', checkScroll);
-
-            // Initial Check
-            checkScroll();
+            });
 
             // Animations beim Scrollen starten
             const sections = document.querySelectorAll('section');
@@ -127,6 +148,22 @@
                 });
             });
         });
+
+        // JavaScript für Modals
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Schließen des Modals beim Klick außerhalb des Inhalts
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
     </script>
 
 </body>
