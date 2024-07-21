@@ -1,7 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+</head>
+<body class="bg-gray-100">
 
-        <p>TEST</p>
-    </head>
+    <header class="bg-white shadow animate-fadeIn">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">My Portfolio</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="text-gray-600 hover:text-blue-500">Home</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-500">About</a></li>
+                    <li><a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="container mx-auto px-4 py-20">
+        <div class="text-center animate-slideInUp">
+            <h2 class="text-4xl font-bold text-gray-800">Welcome to My Portfolio</h2>
+            <p class="text-gray-600 mt-4">Showcasing my work and skills.</p>
+        </div>
+    </section>
+
+    <section id="about" class="container mx-auto px-4 py-20 bg-white">
+        <div class="text-center animate-slideInUp">
+            <h2 class="text-3xl font-bold text-gray-800">About Me</h2>
+            <p class="text-gray-600 mt-4">I am a web developer with expertise in HTML, CSS, JavaScript, and Firebase.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container mx-auto px-4 py-20">
+        <div class="text-center animate-slideInUp">
+            <h2 class="text-3xl font-bold text-gray-800">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-bold text-gray-800">Project 1</h3>
+                    <p class="text-gray-600 mt-2">Description of the project goes here.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-bold text-gray-800">Project 2</h3>
+                    <p class="text-gray-600 mt-2">Description of the project goes here.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-bold text-gray-800">Project 3</h3>
+                    <p class="text-gray-600 mt-2">Description of the project goes here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-6 mt-20 animate-fadeIn">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            &copy; 2024 My Portfolio. All rights reserved.
+        </div>
+    </footer>
+
+</body>
 </html>
