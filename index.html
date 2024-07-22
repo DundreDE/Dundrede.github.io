@@ -1,167 +1,41 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Portfolio</title>
+    <title>Redirecting...</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <style>
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
 
-    <header id="header" class="bg-white-transparent shadow header-fixed fade-in">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">My Portfolio</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#home" class="text-gray-600 hover:text-gray-500">Home</a></li>
-                    <li><a href="#about" class="text-gray-600 hover:text-blue-500">About</a></li>
-                    <li><a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
 
-    <section id="home" class="container mx-auto px-4 py-20 fade-in">
-        <div class="text-center slide-in-up">
-            <h2 class="text-4xl font-bold">Welcome to My Portfolio</h2>
-            <p class="mt-4">Showcasing my work and skills.</p>
-        </div>
-    </section>
-
-    <section id="about" class="container mx-auto px-4 py-20 bg-white-transparent rounded-lg shadow-md grow-on-scroll fade-in">
-        <div class="text-center slide-in-up">
-            <h2 class="text-3xl font-bold">About Me</h2>
-            <p class="mt-4">Ich bin ein Schüler, der seit einigen Jahren leidenschaftlich programmiert. Meine Kenntnisse umfassen:</p>
-            <ul class="list-disc list-inside mt-4 text-left mx-auto max-w-3xl">
-                <li><strong>Python:</strong> Mittelstark, mit Erfahrung in Web-Scraping, Datenanalyse und Automatisierung.</li>
-                <li><strong>HTML & CSS:</strong> Hoch, mit soliden Kenntnissen in der Webentwicklung und Design.</li>
-                <li><strong>JavaScript:</strong> Hoch, insbesondere im Frontend-Bereich und bei der Entwicklung interaktiver Web-Anwendungen.</li>
-                <li><strong>Tailwind CSS:</strong> Mittelstark, mit Erfahrung in der Verwendung von Utility-First CSS-Frameworks für schnelle und flexible Designs.</li>
-                <li><strong>Java:</strong> Anfänger, mit grundlegenden Kenntnissen in objektorientierter Programmierung und Android-Entwicklung.</li>
-            </ul>
-            <p class="mt-4">Außerdem bin ich Admin bei einem Minecraft-Server namens <a href="https://onthepixel.net" target="_blank" class="text-blue-500 hover:underline">onthepixel.net</a>, wo ich meine Programmierfähigkeiten in der Serververwaltung und Entwicklung einbringe.</p>
-        </div>
-    </section>
-
-    <section id="projects" class="container mx-auto px-4 py-20 fade-in">
-        <div class="text-center slide-in-up">
-            <h2 class="text-3xl font-bold">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('project1')">
-                    <h3 class="text-xl font-bold">Weather App</h3>
-                    <p class="mt-2">A weather app with dark mode, hourly and daily forecasts using OpenWeather API, and dynamic background based on weather.</p>
-                </div>
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('project2')">
-                    <h3 class="text-xl font-bold">Intolerance Checker</h3>
-                    <p class="mt-2">An intolerance checker with a barcode scanner using Open Food Facts API.</p>
-                </div>
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('project3')">
-                    <h3 class="text-xl font-bold">Film Watchlist</h3>
-                    <p class="mt-2">A website for managing a watchlist of films with detailed views, rankings, and streaming availability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-white-transparent py-6 mt-20 fade-in">
-        <div class="container mx-auto px-4 text-center">
-            &copy; 2024 My Portfolio. All rights reserved.
-        </div>
-    </footer>
-
-    <!-- Modals -->
-    <div id="project1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('project1')">&times;</span>
-            <h3 class="text-2xl font-bold mb-4">Weather App</h3>
-            <img src="path/to/weather-app-image.jpg" alt="Weather App" onerror="this.src='placeholder.jpg';">
-            <p class="mt-4">A weather app with dark mode, hourly and daily forecasts using OpenWeather API. The background changes based on the weather.</p>
-            <a href="https://dundrede.github.io/weatherapp" target="_blank" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-    </div>
-
-    <div id="project2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('project2')">&times;</span>
-            <h3 class="text-2xl font-bold mb-4">Intolerance Checker</h3>
-            <img src="path/to/intolerance-checker-image.jpg" alt="Intolerance Checker" onerror="this.src='placeholder.jpg';">
-            <p class="mt-4">An intolerance checker with a barcode scanner using Open Food Facts API. Check if products are compatible with your dietary needs.</p>
-            <a href="https://dundrede.github.io/lebensmittel" target="_blank" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-    </div>
-
-    <div id="project3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('project3')">&times;</span>
-            <h3 class="text-2xl font-bold mb-4">Film Watchlist</h3>
-            <img src="path/to/film-watchlist-image.jpg" alt="Film Watchlist" onerror="this.src='placeholder.jpg';">
-            <p class="mt-4">A film watchlist manager with detailed views, ranking, and streaming provider information. Keep track of movies you want to watch.</p>
-            <a href="URL-to-your-project" target="_blank" class="text-blue-500 hover:underline">View Project</a>
-        </div>
-    </div>
-
+        .hidden {
+            display: none;
+        }
+    </style>
     <script>
-        // JavaScript für Scroll-Effekte
-        document.addEventListener('DOMContentLoaded', function () {
-            const header = document.getElementById('header');
-            let lastScrollTop = 0;
-            window.addEventListener('scroll', function() {
-                let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                if (currentScroll > lastScrollTop) {
-                    header.classList.remove('header-show');
-                    header.classList.add('header-hide');
-                } else {
-                    header.classList.remove('header-hide');
-                    header.classList.add('header-show');
-                }
-                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-            });
-
-            // Animations beim Scrollen starten
-            const sections = document.querySelectorAll('section');
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-            
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, options);
-            
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            // Smooth Scroll für Menü-Punkte
-            const menuLinks = document.querySelectorAll('a[href^="#"]');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        });
-
-        // JavaScript für Modals
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
+        function detectLanguage() {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('de')) {
+                window.location.href = 'index_de.html';
+            } else {
+                window.location.href = 'index_en.html';
+            }
         }
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
+        window.onload = detectLanguage;
     </script>
-
+</head>
+<body class="bg-gray-100">
+    <!-- Ladebildschirm -->
+    <div id="loader" class="fixed inset-0 bg-gray-800 flex items-center justify-center z-50">
+        <div class="text-white text-2xl font-bold animate-pulse">Lade...</div>
+    </div>
 </body>
 </html>

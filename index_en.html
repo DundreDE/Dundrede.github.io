@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header id="header" class="bg-white-transparent shadow header-fixed fade-in">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Jakob</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="text-gray-600 hover:text-gray-500">Home</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-500">About</a></li>
+                    <li><a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="container mx-auto px-4 py-20 fade-in">
+        <div class="text-center slide-in-up">
+            <h2 class="text-4xl font-bold typing">Welcome to My Portfolio</h2>
+            <p class="mt-4">Here I showcase my work and skills.</p>
+        </div>
+    </section>
+
+    <section id="about" class="container mx-auto px-4 py-20 bg-white-transparent rounded-lg shadow-md grow-on-scroll fade-in">
+        <div class="text-center slide-in-up">
+            <h2 class="text-3xl font-bold">About Me</h2>
+            <p class="mt-4">I am a student who has been programming for a few years. My skills include Python (advanced), HTML (advanced), JavaScript (advanced), CSS (advanced), Tailwind CSS (advanced), Java (beginner). I am also an admin on the Minecraft server OnThePixel.net.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container mx-auto px-4 py-20 fade-in">
+        <div class="text-center slide-in-up">
+            <h2 class="text-3xl font-bold">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Project 1 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal1')">
+                    <h3 class="text-xl font-bold">Weather App</h3>
+                    <p class="mt-2">A weather app with dark mode, hourly and daily weather view, using the OpenWeather API. Background changes based on weather.</p>
+                </div>
+
+                <!-- Modal 1 -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <h3 class="text-xl font-bold">Weather App</h3>
+                        <img src="path/to/weatherapp-image.jpg" alt="Weather App" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>A weather app with dark mode, hourly and daily weather view, using the OpenWeather API. Background changes based on weather. <a href="https://dundrede.github.io/Weatherapp/" target="_blank" class="text-blue-500">View Project</a></p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal2')">
+                    <h3 class="text-xl font-bold">Food Intolerance Checker</h3>
+                    <p class="mt-2">A food intolerance checker with barcode scanning, using the Open Food Facts API.</p>
+                </div>
+
+                <!-- Modal 2 -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <h3 class="text-xl font-bold">Food Intolerance Checker</h3>
+                        <img src="path/to/foodchecker-image.jpg" alt="Food Intolerance Checker" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>A food intolerance checker with barcode scanning, using the Open Food Facts API. <a href="https://dundrede.github.io/Lebensmittel-Pruefen/" target="_blank" class="text-blue-500">View Project</a></p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal3')">
+                    <h3 class="text-xl font-bold">Film Watchlist</h3>
+                    <p class="mt-2">A film watchlist website with search, detail view, ranking, and streaming providers through an API.</p>
+                </div>
+
+                <!-- Modal 3 -->
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <h3 class="text-xl font-bold">Film Watchlist</h3>
+                        <img src="path/to/filmwatchlist-image.jpg" alt="Film Watchlist" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>A film watchlist website with search, detail view, ranking, and streaming providers through an API. <a href="https://dundrede.github.io/Watchlist/" target="_blank" class="text-blue-500">View Project</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- More Projects Button -->
+            <button onclick="openModal('moreProjectsModal')" class="mt-8 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">More Projects</button>
+
+            <!-- Modal for Additional Projects -->
+            <div id="moreProjectsModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('moreProjectsModal')">&times;</span>
+                    <h3 class="text-xl font-bold">Additional Projects</h3>
+                    <ul class="mt-4">
+                        <li><strong>School Grades Manager:</strong> A management tool for schools and students.</li>
+                        <li><strong>Running Tracker:</strong> A tracker that records your runs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container mx-auto px-4 py-20 text-center fade-in">
+        <h2 class="text-3xl font-bold mb-4">Contact</h2>
+        <p class="mb-6">Feel free to reach out to me on Discord!</p>
+        <a href="https://discord.com/users/YOUR_DISCORD_ID" target="_blank" class="contact-button">Contact on Discord</a>
+    </section>
+
+    <footer class="bg-white-transparent py-6 mt-20 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            &copy; 2024 Jakob. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

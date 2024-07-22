@@ -10,6 +10,25 @@ body {
     scroll-behavior: smooth; /* Sanftes Scrollen */
 }
 
+/* Typing Animation */
+.typing {
+    overflow: hidden; /* Ensures the text doesn't overflow */
+    white-space: nowrap; /* Keeps the text on one line */
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    display: inline-block; /* Allows to center within flex container */
+}
+
+/* Typing Animation Keyframes */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}
+
 /* Keyframes für Fade-In Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -56,18 +75,16 @@ footer {
     position: sticky;
     top: 0;
     z-index: 1000; /* Sicherstellen, dass es über anderen Inhalten liegt */
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Sanfte Übergänge für die Sichtbarkeit */
 }
 
 /* Sichtbarkeit des Headers beim Scrollen */
 .header-hide {
     transform: translateY(-100%);
-    opacity: 0;
+    transition: transform 0.3s ease-out;
 }
 
 .header-show {
     transform: translateY(0);
-    opacity: 1;
 }
 
 /* Links beim Hover Schwarz für bessere Sichtbarkeit */
@@ -76,63 +93,90 @@ a {
     text-decoration: none; /* Optional: Entfernen der Unterstreichung bei Links */
 }
 
-/* Modal Styles */
+/* Typwriter-Effekt */
+.typewriter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.typewriter {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(40, end) 1s 1 normal both;
+    text-align: center; /* Zentriert den Text */
+    font-size: 2rem; /* Font-Größe anpassen */
+    max-width: 100%;
+}
+
+/* Modal Container */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.7); /* Dunkler Overlay-Hintergrund */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Modal Content */
 .modal-content {
-    background-color: #fff;
-    margin: 10% auto;
+    background-color: #fefefe;
+    margin: 10% auto; /* Etwas höher positionieren */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    color: #333; /* Dunkler Text für bessere Lesbarkeit */
+    width: 90%; /* Breite des Modals */
+    max-width: 500px; /* Maximale Breite */
+    max-height: 80vh; /* Maximale Höhe */
+    overflow-y: auto; /* Scrollen bei zu viel Inhalt */
+    color: #000; /* Textfarbe schwarz */
 }
 
+/* Modal Image */
 .modal-content img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    width: 100%; /* Bild auf die Breite des Containers anpassen */
+    height: auto; /* Höhe proportional */
+    max-width: 400px; /* Maximale Breite für das Bild */
+    margin: 0 auto; /* Zentrieren des Bildes */
+    display: block; /* Bild als Block-Element */
 }
 
+/* Close Button */
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
+    cursor: pointer;
+}
+/* Kontaktfeld Styling */
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7289da; /* Discord-Farbe */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
 }
 
-.placeholder-image {
-    width: 100%;
-    height: 200px;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #666;
-    text-align: center;
-    border-radius: 8px;
+.contact-button:hover {
+    background-color: #5b6eae; /* Etwas dunkler beim Hover */
+}
+
+.contact-button:focus {
+    outline: none;
 }

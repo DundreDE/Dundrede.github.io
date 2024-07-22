@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header id="header" class="bg-white-transparent shadow header-fixed fade-in">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Jakob</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="text-gray-600 hover:text-gray-500">Startseite</a></li>
+                    <li><a href="#about" class="text-gray-600 hover:text-blue-500">Über mich</a></li>
+                    <li><a href="#projects" class="text-gray-600 hover:text-blue-500">Projekte</a></li>
+                    <li><a href="#contact" class="text-gray-600 hover:text-blue-500">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="container mx-auto px-4 py-20 fade-in">
+        <div class="text-center slide-in-up">
+            <h2 class="text-4xl font-bold typing">Willkommen auf meinem Portfolio</h2>
+            <p class="mt-4">Hier zeige ich meine Arbeiten und Fähigkeiten.</p>
+        </div>
+    </section>
+
+    <section id="about" class="container mx-auto px-4 py-20 bg-white-transparent rounded-lg shadow-md grow-on-scroll fade-in">
+        <div class="text-center slide-in-up">
+            <h2 class="text-3xl font-bold">Über mich</h2>
+            <p class="mt-4">Ich bin ein Schüler, der seit einigen Jahren programmiert. Meine Fähigkeiten umfassen Python (fortgeschritten), HTML (fortgeschritten), JavaScript (fortgeschritten), CSS (fortgeschritten), Tailwind CSS (fortgeschritten), Java (Anfänger). Außerdem bin ich Admin auf dem Minecraft-Server OnThePixel.net.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container mx-auto px-4 py-20 fade-in">
+        <div class="text-center slide-in-up">
+            <h2 class="text-3xl font-bold">Projekte</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Project 1 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal1')">
+                    <h3 class="text-xl font-bold">Wetter-App</h3>
+                    <p class="mt-2">Eine Wetter-App mit dunklem Modus, stündlicher und täglicher Wetteransicht, die die OpenWeather API verwendet. Hintergrund ändert sich je nach Wetter.</p>
+                </div>
+
+                <!-- Modal 1 -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal1')">&times;</span>
+                        <h3 class="text-xl font-bold">Wetter-App</h3>
+                        <img src="path/to/weatherapp-image.jpg" alt="Wetter-App" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>Eine Wetter-App mit dunklem Modus, stündlicher und täglicher Wetteransicht, die die OpenWeather API verwendet. Hintergrund ändert sich je nach Wetter. <a href="https://dundrede.github.io/Weatherapp/" target="_blank" class="text-blue-500">Projekt ansehen</a></p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal2')">
+                    <h3 class="text-xl font-bold">Lebensmittel-Intoleranz-Checker</h3>
+                    <p class="mt-2">Ein Lebensmittel-Intoleranz-Checker mit Barcode-Scanner, der die Open Food Facts API verwendet.</p>
+                </div>
+
+                <!-- Modal 2 -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <h3 class="text-xl font-bold">Lebensmittel-Intoleranz-Checker</h3>
+                        <img src="path/to/foodchecker-image.jpg" alt="Lebensmittel-Intoleranz-Checker" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>Ein Lebensmittel-Intoleranz-Checker mit Barcode-Scanner, der die Open Food Facts API verwendet. <a href="https://dundrede.github.io/Lebensmittel-Pruefen/" target="_blank" class="text-blue-500">Projekt ansehen</a></p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal3')">
+                    <h3 class="text-xl font-bold">Film-Watchlist</h3>
+                    <p class="mt-2">Eine Film-Watchlist-Website mit Suchfunktion, Detailansicht, Ranking und Streaming-Anbietern über eine API.</p>
+                </div>
+
+                <!-- Modal 3 -->
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal3')">&times;</span>
+                        <h3 class="text-xl font-bold">Film-Watchlist</h3>
+                        <img src="path/to/filmwatchlist-image.jpg" alt="Film-Watchlist" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <p>Eine Film-Watchlist-Website mit Suchfunktion, Detailansicht, Ranking und Streaming-Anbietern über eine API. <a href="https://dundrede.github.io/Watchlist/" target="_blank" class="text-blue-500">Projekt ansehen</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Mehr Projekte Button -->
+            <button onclick="openModal('moreProjectsModal')" class="mt-8 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">Weitere Projekte</button>
+
+            <!-- Modal für zusätzliche Projekte -->
+            <div id="moreProjectsModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('moreProjectsModal')">&times;</span>
+                    <h3 class="text-xl font-bold">Zusätzliche Projekte</h3>
+                    <ul class="mt-4">
+                        <li><strong>Schulnoten-Manager:</strong> Ein Verwaltungstool für Schulen und Schüler.</li>
+                        <li><strong>Lauf-Tracker:</strong> Ein Tracker, der deine Aktivitäten aufzeichnet.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container mx-auto px-4 py-20 text-center fade-in">
+        <h2 class="text-3xl font-bold mb-4">Kontakt</h2>
+        <p class="mb-6">Zögere nicht, mich auf Discord zu kontaktieren!</p>
+        <a href="https://discord.com/users/YOUR_DISCORD_ID" target="_blank" class="contact-button">Auf Discord kontaktieren</a>
+    </section>
+
+    <footer class="bg-white-transparent py-6 mt-20 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            &copy; 2024 Jakob. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+</body>
+</html>
