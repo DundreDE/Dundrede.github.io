@@ -16,6 +16,7 @@ body {
     white-space: nowrap; /* Keeps the text on one line */
     animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
     display: inline-block; /* Allows to center within flex container */
+    border-right: 2px solid orange; /* Border for the caret effect */
 }
 
 /* Typing Animation Keyframes */
@@ -161,6 +162,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
 /* Kontaktfeld Styling */
 .contact-button {
     display: inline-block;
@@ -214,4 +216,32 @@ a {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .text-4xl {
+        font-size: 2rem;
+    }
+
+    .text-3xl {
+        font-size: 1.75rem;
+    }
+
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        
+    }
+
+    .typing {
+        font-size: 1.25rem;
+    }
 }
