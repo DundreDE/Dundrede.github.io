@@ -52,7 +52,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal1')">&times;</span>
                         <h3 class="text-xl font-bold">Weather App</h3>
-                        <img src="path/to/weatherapp-image.jpg" alt="Weather App" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <img src="Project1.PNG" alt="Weather App" onerror="this.onerror=null;this.src='placeholder.jpg';">
                         <p>A weather app with dark mode, hourly and daily weather view, using the OpenWeather API. Background changes based on weather. <a href="https://dundrede.github.io/Weatherapp/" target="_blank" class="text-blue-500">View Project</a></p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal2')">&times;</span>
                         <h3 class="text-xl font-bold">Food Intolerance Checker</h3>
-                        <img src="path/to/foodchecker-image.jpg" alt="Food Intolerance Checker" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <img src="Project2.PNG" alt="Food Intolerance Checker" onerror="this.onerror=null;this.src='placeholder.jpg';">
                         <p>A food intolerance checker with barcode scanning, using the Open Food Facts API. <a href="https://dundrede.github.io/Lebensmittel-Pruefen/" target="_blank" class="text-blue-500">View Project</a></p>
                     </div>
                 </div>
@@ -84,10 +84,16 @@
                     <div class="modal-content">
                         <span class="close" onclick="closeModal('modal3')">&times;</span>
                         <h3 class="text-xl font-bold">Film Watchlist</h3>
-                        <img src="path/to/filmwatchlist-image.jpg" alt="Film Watchlist" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                        <div class="slideshow-container">
+                            <img class="slides" src="Project3(1).PNG" alt="Film Watchlist Image 1" onerror="this.onerror=null;this.src='placeholder.jpg';">
+                            <img class="slides" src="Project3(2).PNG" alt="Film Watchlist Image 2" onerror="this.onerror=null;this.src='placeholder.jpg';" style="display:none;">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
                         <p>A film watchlist website with search, detail view, ranking, and streaming providers through an API. <a href="https://dundrede.github.io/Watchlist/" target="_blank" class="text-blue-500">View Project</a></p>
                     </div>
                 </div>
+                
             </div>
             <!-- More Projects Button -->
             <button onclick="openModal('moreProjectsModal')" class="mt-8 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">More Projects</button>
