@@ -16,7 +16,7 @@ body {
     white-space: nowrap; /* Keeps the text on one line */
     animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
     display: inline-block; /* Allows to center within flex container */
-    border-right: 2px solid orange; /* Border for the caret effect */
+    border-right: 2px solid transparent; /* Entfernt den orangenen Cursor */
 }
 
 /* Typing Animation Keyframes */
@@ -27,7 +27,7 @@ body {
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: orange; }
+    50% { border-color: transparent; }
 }
 
 /* Keyframes für Fade-In Animation */
