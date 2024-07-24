@@ -64,6 +64,9 @@ body {
 /* Hintergrund für Footer und Container mit Durchscheinen des Farbverlaufs */
 .bg-white-transparent {
     background-color: rgba(255, 255, 255, 0.6); /* Weiß mit 60% Opazität für leichten Durchblick */
+    padding: 20px; /* Padding für mehr Platz um den Inhalt */
+    border-radius: 10px; /* Abgerundete Ecken */
+    margin-bottom: 20px; /* Abstand zum nächsten Element */
 }
 
 /* Stärkere Transparenz für den Footer */
@@ -218,6 +221,11 @@ a {
     background-color: rgba(0,0,0,0.8);
 }
 
+/* Globaler Abstand für Elemente */
+section, .bg-white-transparent {
+    margin-bottom: 30px; /* Abstand zwischen den Abschnitten */
+}
+
 /* Responsiveness */
 @media (max-width: 768px) {
     .container {
@@ -238,10 +246,23 @@ a {
 
     nav ul {
         flex-direction: column;
-        
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
     }
 
     .typing {
         font-size: 1.25rem;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .modal-content {
+        width: 95%;
     }
 }
