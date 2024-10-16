@@ -1,128 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jakob's Portfolio</title>
+    <title>My Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <style>
+        /* Background gradient for the entire body */
+        body {
+            background: linear-gradient(to bottom right, #6EE7B7, #3B82F6);
+            /* Transition from Mint Green to Blue */
+            min-height: 100vh;
+        }
+
+        /* Custom styles for hover effects and transitions */
+        .hover-shadow:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary {
+            background-color: #4F46E5;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #3B82F6;
+        }
+
+        .input-field {
+            border: 2px solid #4F46E5;
+            transition: border-color 0.3s;
+        }
+
+        .input-field:focus {
+            border-color: #3B82F6;
+            outline: none;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 10; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+    </style>
 </head>
-<body>
-    <header id="header" class="bg-white-transparent shadow header-fixed fade-in">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800">Jakob</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#home" class="text-gray-600 hover:text-blue-500">Home</a></li>
-                    <li><a href="#about" class="text-gray-600 hover:text-blue-500">About</a></li>
-                    <li><a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a></li>
-                    <li><a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center p-5">
+            <h1 class="text-3xl font-bold text-blue-600">Nativ's Portfolio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-gray-700 hover:text-blue-500 transition">About Me</a></li>
+                <li><a href="#projects" class="text-gray-700 hover:text-blue-500 transition">Projects</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="home" class="container mx-auto px-4 py-20 fade-in slide-in-trigger">
-        <div class="text-center">
-            <h2 class="text-4xl font-bold typing">Welcome to my portfolio.</h2>
-            <h2 class="text-4xl font-bold">I'm Jakob.</h2>
-            <p class="mt-4">Here I showcase my work and skills.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="text-white py-40 text-center">
+
+        <h2 class="text-6xl font-extrabold">Welcome to My Creative World</h2>
+        <p class="mt-6 text-xl max-w-lg mx-auto">I am a web developer who creates innovative solutions and is excited to learn new things.</p>
+        <a href="#projects" class="mt-8 inline-block btn-primary py-3 px-6 rounded-full shadow-md transition">View My Projects</a>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="py-32 text-center text-white">
+        <h3 class="text-5xl font-bold">About Me</h3>
+        <p class="mt-4 text-lg max-w-2xl mx-auto">I am a passionate developer with an eye for detail and a love for designing user experiences.</p>
+        <div class="mt-8 flex justify-center">
+            <img src="neues LOGO.jpg" alt="My Picture" class="rounded-full shadow-lg w-36 h-36"> <!-- Size limited to 150x150 pixels -->
         </div>
     </section>
 
-    <section id="about" class="container mx-auto px-4 py-20 bg-white-transparent rounded-lg shadow-md grow-on-scroll fade-in">
-        <div class="text-center slide-in-up">
-            <h2 class="text-3xl font-bold">About Me</h2>
-            <p class="mt-4">I am a student who has been programming for a few years. My skills include Python (advanced), HTML (advanced), JavaScript (advanced), CSS (advanced), Tailwind CSS (advanced), Java (beginner). I am also an admin on the Minecraft server OnThePixel.net.</p>
-        </div>
-    </section>
-
-    <section id="projects" class="container mx-auto px-4 py-20 fade-in">
-        <div class="text-center slide-in-up">
-            <h2 class="text-3xl font-bold">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                <!-- Project 1 -->
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal1')">
-                    <h3 class="text-xl font-bold">To-Do App</h3>
-                    <p class="mt-2">To-Do App with Image Upload and Editing Mode</p>
+    <!-- Projects -->
+    <section id="projects" class="py-32 text-gray-800">
+        <div class="container mx-auto text-center">
+            <h3 class="text-5xl font-bold">My Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                <!-- To-Do App -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-shadow">
+                    <h4 class="text-2xl font-bold">To-Do App</h4>
+                    <p class="mt-2">A to-do app with image upload and editing mode.</p>
+                    <button onclick="openModal('todo-app')" class="mt-4 inline-block btn-primary py-2 px-4 rounded transition">Learn More</button>
                 </div>
-
-                <!-- Modal 1 -->
-                <div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal('modal1')">&times;</span>
-                        <h3 class="text-xl font-bold">Weather App</h3>
-                        <img src="Project4.PNG" alt="To-Do App" onerror="this.onerror=null;this.src='placeholder.jpg';">
-                        <p>This To-Do app allows users to create, edit, and delete tasks, with the capability to add images. The application utilizes LocalStorage for persistent task and image storage. The interface is modern and responsive, designed with Tailwind CSS. Key features include image validation and an editing mode that ensures old image data isn’t carried over to new tasks. <a href="https://dundrede.github.io/ToDo/" target="_blank" class="text-blue-500">View Project</a></p>
-                    </div>
+                <!-- Film Watchlist -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-shadow">
+                    <h4 class="text-2xl font-bold">Film Watchlist</h4>
+                    <p class="mt-2">A film watchlist website with a search function.</p>
+                    <button onclick="openModal('film-watchlist')" class="mt-4 inline-block btn-primary py-2 px-4 rounded transition">Learn More</button>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal2')">
-                    <h3 class="text-xl font-bold">Food Intolerance Checker</h3>
-                    <p class="mt-2">A food intolerance checker with barcode scanning, using the Open Food Facts API.</p>
+                <!-- Food Intolerance Checker -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-shadow">
+                    <h4 class="text-2xl font-bold">Food Intolerance Checker</h4>
+                    <p class="mt-2">A food intolerance checker with a barcode scanner.</p>
+                    <button onclick="openModal('food-intolerance-checker')" class="mt-4 inline-block btn-primary py-2 px-4 rounded transition">Learn More</button>
                 </div>
-
-                <!-- Modal 2 -->
-                <div id="modal2" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal('modal2')">&times;</span>
-                        <h3 class="text-xl font-bold">Food Intolerance Checker</h3>
-                        <img src="Project2.PNG" alt="Food Intolerance Checker" onerror="this.onerror=null;this.src='placeholder.jpg';">
-                        <p>A food intolerance checker with barcode scanning, using the Open Food Facts API. <a href="https://dundrede.github.io/Lebensmittel-Pruefen/" target="_blank" class="text-blue-500">View Project</a></p>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-white-transparent p-6 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 cursor-pointer" onclick="openModal('modal3')">
-                    <h3 class="text-xl font-bold">Film Watchlist</h3>
-                    <p class="mt-2">A film watchlist website with search, detail view, ranking, and streaming providers through an API.</p>
-                </div>
-
-                <!-- Modal 3 -->
-                <div id="modal3" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal('modal3')">&times;</span>
-                        <h3 class="text-xl font-bold">Film Watchlist</h3>
-                        <div class="slideshow-container">
-                            <img class="slides" src="Project3(1).PNG" alt="Film Watchlist Image 1" onerror="this.onerror=null;this.src='placeholder.jpg';">
-                            <img class="slides" src="Project3(2).PNG" alt="Film Watchlist Image 2" onerror="this.onerror=null;this.src='placeholder.jpg';" style="display:none;">
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                        </div>
-                        <p>A film watchlist website with search, detail view, ranking, and streaming providers through an API. <a href="https://dundrede.github.io/Watchlist/" target="_blank" class="text-blue-500">View Project</a></p>
-                    </div>
-                </div>
-                
             </div>
-            <!-- More Projects Button -->
-            <button onclick="openModal('moreProjectsModal')" class="mt-8 py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600">More Projects</button>
-
-            <!-- Modal for Additional Projects -->
-            <div id="moreProjectsModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('moreProjectsModal')">&times;</span>
-                    <h3 class="text-xl font-bold">Additional Projects</h3>
-                    <ul class="mt-4">
-                        <li><strong>School Grades Manager:</strong> A management tool for schools and students.</li>
-                        <li><strong>Running Tracker:</strong> A tracker that records your runs.</li>
-                    </ul>
+            <h3 class="text-4xl font-bold mt-16">More Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 mt-10">
+                <!-- School Grades Manager -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-shadow">
+                    <h4 class="text-2xl font-bold">School Grades Manager</h4>
+                    <p class="mt-2">A management tool for schools and students.</p>
+                </div>
+                <!-- Running Tracker -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover-shadow">
+                    <h4 class="text-2xl font-bold">Running Tracker</h4>
+                    <p class="mt-2">A tracker that records your activities.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container mx-auto px-4 py-20 text-center fade-in">
-        <h2 class="text-3xl font-bold mb-4">Contact</h2>
-        <p class="mb-6">Feel free to reach out to me on Discord! @onlyjakob</p>
-        
-    </section>
-
-    <footer class="bg-white-transparent py-6 mt-20 fade-in">
-        <div class="container mx-auto px-4 text-center">
-            &copy; 2024 Jakob. All rights reserved.
-        </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 Native. All rights reserved.</p>
     </footer>
+
+    <!-- Modals -->
+    <div id="todo-app" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('todo-app')" class="close cursor-pointer text-red-500 float-right text-2xl">&times;</span>
+            <h4 class="text-xl font-bold">To-Do App</h4>
+            <p>This to-do app allows you to create, edit, and delete tasks, including the ability to add images. The application uses LocalStorage for persistent storage of tasks and images. The user interface is modern and responsive, designed with Tailwind CSS. Features include image validation and an editing mode that ensures old image data is not carried over to new tasks.</p>
+            <a href="https://dundrede.github.io/ToDo/" target="_blank" class="mt-2 inline-block btn-primary py-2 px-4 rounded transition">View Project</a>
+        </div>
+    </div>
+
+    <div id="film-watchlist" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('film-watchlist')" class="close cursor-pointer text-red-500 float-right text-2xl">&times;</span>
+            <h4 class="text-xl font-bold">Film Watchlist</h4>
+            <p>A film watchlist website with a search function, detail view, ranking, and streaming providers via an API.</p>
+            <a href="https://dundrede.github.io/Watchlist/" target="_blank" class="mt-2 inline-block btn-primary py-2 px-4 rounded transition">View Project</a>
+        </div>
+    </div>
+
+    <div id="food-intolerance-checker" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('food-intolerance-checker')" class="close cursor-pointer text-red-500 float-right text-2xl">&times;</span>
+            <h4 class="text-xl font-bold">Food Intolerance Checker</h4>
+            <p>A food intolerance checker with a barcode scanner that uses the Open Food Facts API.</p>
+            <a href="https://dundrede.github.io/Lebensmittel-Pruefen/" target="_blank" class="mt-2 inline-block btn-primary py-2 px-4 rounded transition">View Project</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+
 </body>
+
 </html>
