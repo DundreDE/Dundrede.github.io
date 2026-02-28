@@ -1,41 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .fade-in {
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
-    <script>
-        function detectLanguage() {
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang.startsWith('de')) {
-                window.location.href = 'index_de.html';
-            } else {
-                window.location.href = 'index_en.html';
-            }
-        }
-
-        window.onload = detectLanguage;
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <meta name="description" content="Modernes Portfolio">
+  <meta property="og:title" content="Portfolio">
+  <meta property="og:description" content="Modernes Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="placeholder.jpg" id="og-image-meta">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
-    <!-- Ladebildschirm -->
-    <div id="loader" class="fixed inset-0 bg-gray-800 flex items-center justify-center z-50">
-        <div class="text-white text-2xl font-bold animate-pulse">Lade...</div>
-    </div>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" id="brand-logo" href="#top">JAKOB.DEV</a>
+    <nav aria-label="Hauptnavigation">
+      <a id="nav-projects" href="#projects">Projekte</a>
+      <a id="nav-services" href="#services">Leistungen</a>
+      <a id="nav-about" href="#about">About</a>
+      <a id="nav-cta" class="nav-cta" href="#contact">Projekt starten</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p id="hero-eyebrow" class="eyebrow reveal">Frontend Engineer + Creative Developer</p>
+        <h1 id="hero-title" class="reveal">Web Experiences, die auffallen und verkaufen.</h1>
+        <p id="hero-copy" class="hero-copy reveal">
+          Ich baue schnelle, visuell starke Webseiten mit sauberem Code, praeziser Animation und klarer Conversion-Strategie.
+        </p>
+        <div class="hero-actions reveal">
+          <a id="hero-cta-primary" class="btn btn-primary" href="#contact">Kostenloses Erstgespraech</a>
+          <a id="hero-cta-secondary" class="btn btn-ghost" href="#projects">Arbeiten ansehen</a>
+        </div>
+        <ul id="metrics-list" class="metrics reveal">
+          <li><span>20+</span> Projekte</li>
+          <li><span>24h</span> Antwortzeit</li>
+          <li><span>95+</span> Lighthouse Ziel</li>
+        </ul>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="orb-glow" aria-hidden="true"></div>
+        <div class="hero-panel">
+          <img src="neues LOGO.jpg" alt="Jakob Logo" class="hero-logo">
+          <div class="hero-panel-copy">
+            <p class="hero-panel-label">Aktuell verfuegbar</p>
+            <h3>Design + Code aus einer Hand</h3>
+            <ul class="hero-points">
+              <li>Landingpages mit klarer Conversion-Fuehrung</li>
+              <li>Saubere Frontend-Architektur</li>
+              <li>Schnelle Umsetzung und enge Abstimmung</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-head reveal">
+        <p id="projects-eyebrow" class="eyebrow">Featured Work</p>
+        <h2 id="projects-title">Ausgewaehlte Projekte</h2>
+      </div>
+      <div id="projects-list" class="project-grid">
+        <article class="project-card reveal">
+          <img src="Project1.PNG" alt="Projekt 1 Vorschau" loading="lazy" decoding="async">
+          <div class="project-info">
+            <h3>Landing Experience</h3>
+            <p>Conversion-optimierte Landingpage mit Storytelling, Motion und klaren CTAs.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <img src="Project2.PNG" alt="Projekt 2 Vorschau" loading="lazy" decoding="async">
+          <div class="project-info">
+            <h3>App UI Redesign</h3>
+            <p>Neues Interface mit besserer UX, schnelleren Flows und moderner visueller Sprache.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <img src="Project3(1).PNG" alt="Projekt 3 Vorschau" loading="lazy" decoding="async">
+          <div class="project-info">
+            <h3>Brand Website</h3>
+            <p>Markenauftritt mit starker Typografie, fein abgestimmter Animation und sauberer Struktur.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <img src="Project4.PNG" alt="Projekt 4 Vorschau" loading="lazy" decoding="async">
+          <div class="project-info">
+            <h3>Interactive Showcase</h3>
+            <p>Interaktive Produktseite mit Fokus auf Performance und visuelle Wirkung.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-head reveal">
+        <p id="services-eyebrow" class="eyebrow">Leistungen</p>
+        <h2 id="services-title">Vom Konzept bis Launch</h2>
+      </div>
+      <div id="services-list" class="service-grid">
+        <article class="service-card reveal">
+          <h3>Frontend Engineering</h3>
+          <p>Responsive, performante und wartbare Implementierung mit Fokus auf Business-Ziele.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Animation & Motion</h3>
+          <p>Anime.js basierte Übergänge und Interaktionen, die Blickführung und Qualität erhöhen.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>UI Systems</h3>
+          <p>Wiederverwendbare Komponenten und klare Strukturen fuer konsistente, skalierbare Seiten.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-panel reveal">
+        <p id="about-eyebrow" class="eyebrow">About</p>
+        <h2 id="about-title">Ich entwickle digitale Auftritte, die technisch und visuell ueberzeugen.</h2>
+        <p id="about-copy">
+          Mein Fokus liegt auf modernen Frontends, die schnell laden, klar kommunizieren und Nutzer aktiv in eine Handlung führen.
+          Ich kombiniere Engineering mit Designverständnis, damit dein Projekt nicht nur funktioniert, sondern im Kopf bleibt.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-box reveal">
+        <p id="contact-eyebrow" class="eyebrow">Start</p>
+        <h2 id="contact-title">Bereit fuer dein naechstes Projekt?</h2>
+        <p id="contact-copy">Schick mir kurz dein Ziel, ich melde mich innerhalb von 24 Stunden.</p>
+        <form id="contact-form" class="contact-form" action="mailto:hello@jakob.dev" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            E-Mail
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Projektziel
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button id="contact-button" type="submit" class="btn btn-primary">Projekt anfragen</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="site.config.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
