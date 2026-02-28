@@ -1,41 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .fade-in {
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .hidden {
-            display: none;
-        }
-    </style>
-    <script>
-        function detectLanguage() {
-            const userLang = navigator.language || navigator.userLanguage;
-            if (userLang.startsWith('de')) {
-                window.location.href = 'index_de.html';
-            } else {
-                window.location.href = 'index_en.html';
-            }
-        }
-
-        window.onload = detectLanguage;
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakob | Frontend Engineer & 3D Web Experiences</title>
+  <meta name="description" content="Ich entwickle performante, visuell starke Websites mit Animation und 3D-Fokus.">
+  <meta property="og:title" content="Jakob | Frontend Engineer & 3D Web Experiences">
+  <meta property="og:description" content="Portfolio mit modernen Web-Experiences, Animation und 3D.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="placeholder.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
-    <!-- Ladebildschirm -->
-    <div id="loader" class="fixed inset-0 bg-gray-800 flex items-center justify-center z-50">
-        <div class="text-white text-2xl font-bold animate-pulse">Lade...</div>
-    </div>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="logo" href="#top">JAKOB.DEV</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#projects">Projekte</a>
+      <a href="#services">Leistungen</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Projekt starten</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow reveal">Frontend Engineer + Creative Developer</p>
+        <h1 class="reveal">Web Experiences, die auffallen und verkaufen.</h1>
+        <p class="hero-copy reveal">
+          Ich baue schnelle, visuell starke Webseiten mit sauberem Code, präziser Animation und optionaler 3D-Experience.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#contact">Kostenloses Erstgespräch</a>
+          <a class="btn btn-ghost" href="#projects">Arbeiten ansehen</a>
+        </div>
+        <ul class="metrics reveal">
+          <li><span>20+</span> Projekte</li>
+          <li><span>24h</span> Antwortzeit</li>
+          <li><span>95+</span> Lighthouse Ziel</li>
+        </ul>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="orb-glow" aria-hidden="true"></div>
+        <div id="spline-mount" class="spline-shell" data-spline-url="">
+          <div class="spline-fallback">
+            <p>3D Scene Slot</p>
+            <span>Spline-Link einfügen, um die Live-Scene zu laden.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="section-head reveal">
+        <p class="eyebrow">Featured Work</p>
+        <h2>Ausgewählte Projekte</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <img src="Project1.PNG" alt="Projekt 1 Vorschau">
+          <div class="project-info">
+            <h3>Landing Experience</h3>
+            <p>Conversion-optimierte Landingpage mit Storytelling, Motion und klaren CTAs.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <img src="Project2.PNG" alt="Projekt 2 Vorschau">
+          <div class="project-info">
+            <h3>App UI Redesign</h3>
+            <p>Neues Interface mit besserer UX, schnelleren Flows und moderner visueller Sprache.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <img src="Project3(1).PNG" alt="Projekt 3 Vorschau">
+          <div class="project-info">
+            <h3>Brand Website</h3>
+            <p>Markenauftritt mit starker Typografie, fein abgestimmter Animation und sauberer Struktur.</p>
+          </div>
+        </article>
+        <article class="project-card reveal">
+          <img src="Project4.PNG" alt="Projekt 4 Vorschau">
+          <div class="project-info">
+            <h3>Interactive Showcase</h3>
+            <p>Interaktive Produktseite mit Fokus auf Performance und visuelle Wirkung.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-head reveal">
+        <p class="eyebrow">Leistungen</p>
+        <h2>Vom Konzept bis Launch</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>Frontend Engineering</h3>
+          <p>Responsive, performante und wartbare Implementierung mit Fokus auf Business-Ziele.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Animation & Motion</h3>
+          <p>Anime.js basierte Übergänge und Interaktionen, die Blickführung und Qualität erhöhen.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>3D Integration</h3>
+          <p>Spline-Elemente als Hero-Highlight mit mobilen Fallbacks und klarer Performance-Strategie.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-panel reveal">
+        <p class="eyebrow">About</p>
+        <h2>Ich entwickle digitale Auftritte, die technisch und visuell überzeugen.</h2>
+        <p>
+          Mein Fokus liegt auf modernen Frontends, die schnell laden, klar kommunizieren und Nutzer aktiv in eine Handlung führen.
+          Ich kombiniere Engineering mit Designverständnis, damit dein Projekt nicht nur funktioniert, sondern im Kopf bleibt.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-box reveal">
+        <p class="eyebrow">Start</p>
+        <h2>Bereit für dein nächstes Projekt?</h2>
+        <p>Schick mir kurz dein Ziel, ich melde mich innerhalb von 24 Stunden.</p>
+        <form class="contact-form" action="mailto:hello@jakob.dev" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            E-Mail
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Projektziel
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Projekt anfragen</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
