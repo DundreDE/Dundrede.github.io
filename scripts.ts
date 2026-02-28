@@ -1,11 +1,5 @@
 type AnimeFn = (params: Record<string, unknown>) => void;
 
-declare global {
-  interface Window {
-    anime?: AnimeFn;
-  }
-}
-
 function setupSpline(): void {
   const mount = document.getElementById("spline-mount") as HTMLDivElement | null;
   if (!mount) return;
@@ -31,7 +25,7 @@ function setupReveal(): void {
   if (!targets.length) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const anime = window.anime;
+  const anime = (window as Window & { anime?: AnimeFn }).anime;
 
   if (reducedMotion) {
     markVisible(targets);
@@ -85,5 +79,3 @@ document.addEventListener("DOMContentLoaded", () => {
   setupSpline();
   setupReveal();
 });
-
-export {};
