@@ -4,7 +4,7 @@ Neues Portfolio als One-Page mit:
 - HTML + CSS
 - Anime.js Animationen
 - TypeScript (`scripts.ts`) + kompilierte Browser-Datei (`scripts.js`)
-- vorbereitetem Spline-3D-Slot
+- zentraler Content-Config (`site.config.js`)
 
 ## Start
 `index.html` im Browser öffnen.
@@ -23,20 +23,10 @@ Dort kannst du schnell aendern:
 - Leistungen
 - About Text
 - Kontakt E-Mail + Button Text
-- Spline URL (`hero.splineUrl`)
 
 ## TypeScript kompilieren
 Wenn TypeScript installiert ist:
 
 ```bash
 tsc scripts.ts --target ES2020 --outFile scripts.js
-```
-
-## Spline aktivieren
-In `site.config.js`:
-
-```js
-hero: {
-  splineUrl: "DEIN_SPLINE_EMBED_LINK"
-}
 ```

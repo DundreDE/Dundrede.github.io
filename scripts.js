@@ -46,11 +46,11 @@ function renderProjects(items) {
     if (!list)
         return;
     list.innerHTML = "";
-    items.forEach((item) => {
+    items.forEach((item, index) => {
         const card = document.createElement("article");
         card.className = "project-card reveal";
         card.innerHTML = `
-      <img src="${item.image}" alt="${item.alt}">
+      <img src="${item.image}" alt="${item.alt}" loading="lazy" decoding="async"${index === 0 ? ' fetchpriority="high"' : ""}>
       <div class="project-info">
         <h3>${item.title}</h3>
         <p>${item.description}</p>
@@ -109,28 +109,9 @@ function applyConfig() {
     if (form && config.contact?.email) {
         form.action = `mailto:${config.contact.email}`;
     }
-    const splineMount = document.getElementById("spline-mount");
-    if (splineMount && config.hero?.splineUrl !== undefined) {
-        splineMount.dataset.splineUrl = config.hero.splineUrl;
-    }
     renderMetrics(config.metrics);
     renderProjects(config.projects?.items);
     renderServices(config.services?.items);
-}
-function setupSpline() {
-    const mount = document.getElementById("spline-mount");
-    if (!mount)
-        return;
-    const splineUrl = mount.dataset.splineUrl?.trim();
-    if (!splineUrl)
-        return;
-    const frame = document.createElement("iframe");
-    frame.src = splineUrl;
-    frame.title = "Spline 3D Scene";
-    frame.loading = "lazy";
-    frame.allowFullscreen = true;
-    mount.innerHTML = "";
-    mount.appendChild(frame);
 }
 function markVisible(elements) {
     elements.forEach((el) => el.classList.add("is-visible"));
@@ -186,6 +167,5 @@ function setupReveal() {
 }
 document.addEventListener("DOMContentLoaded", () => {
     applyConfig();
-    setupSpline();
     setupReveal();
 });

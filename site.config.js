@@ -1,9 +1,9 @@
 window.PORTFOLIO_CONFIG = {
   meta: {
-    title: "Jakob | Frontend Engineer & 3D Web Experiences",
-    description: "Ich entwickle performante, visuell starke Websites mit Animation und 3D-Fokus.",
-    ogTitle: "Jakob | Frontend Engineer & 3D Web Experiences",
-    ogDescription: "Portfolio mit modernen Web-Experiences, Animation und 3D.",
+    title: "Jakob | Frontend Engineer & Creative Web Design",
+    description: "Ich entwickle performante, visuell starke Websites mit Animation und klarem Conversion-Fokus.",
+    ogTitle: "Jakob | Frontend Engineer & Creative Web Design",
+    ogDescription: "Portfolio mit modernen Web-Experiences, sauberem Frontend-Code und Conversion-Fokus.",
     ogImage: "placeholder.jpg"
   },
   brand: "JAKOB.DEV",
@@ -16,10 +16,9 @@ window.PORTFOLIO_CONFIG = {
   hero: {
     eyebrow: "Frontend Engineer + Creative Developer",
     title: "Web Experiences, die auffallen und verkaufen.",
-    copy: "Ich baue schnelle, visuell starke Webseiten mit sauberem Code, praeziser Animation und optionaler 3D-Experience.",
+    copy: "Ich baue schnelle, visuell starke Webseiten mit sauberem Code, praeziser Animation und klarer Conversion-Strategie.",
     primaryCta: "Kostenloses Erstgespraech",
-    secondaryCta: "Arbeiten ansehen",
-    splineUrl: ""
+    secondaryCta: "Arbeiten ansehen"
   },
   metrics: [
     { value: "20+", label: "Projekte" },
@@ -69,8 +68,8 @@ window.PORTFOLIO_CONFIG = {
         description: "Anime.js basierte Uebergaenge und Interaktionen, die Blickfuehrung und Qualitaet erhoehen."
       },
       {
-        title: "3D Integration",
-        description: "Spline-Elemente als Hero-Highlight mit mobilen Fallbacks und klarer Performance-Strategie."
+        title: "UI Systems",
+        description: "Wiederverwendbare Komponenten und klare Strukturen fuer konsistente, skalierbare Seiten."
       }
     ]
   },
