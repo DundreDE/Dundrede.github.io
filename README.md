@@ -9,6 +9,22 @@ Neues Portfolio als One-Page mit:
 ## Start
 `index.html` im Browser öffnen.
 
+## Schnelle Anpassung
+Alle wichtigen Inhalte liegen in:
+
+`site.config.js`
+
+Dort kannst du schnell aendern:
+- Titel + Meta Daten
+- Brand + Navigation
+- Hero Texte + CTA
+- Kennzahlen
+- Projekte
+- Leistungen
+- About Text
+- Kontakt E-Mail + Button Text
+- Spline URL (`hero.splineUrl`)
+
 ## TypeScript kompilieren
 Wenn TypeScript installiert ist:
 
@@ -17,8 +33,10 @@ tsc scripts.ts --target ES2020 --outFile scripts.js
 ```
 
 ## Spline aktivieren
-In `index.html` beim Element `#spline-mount`:
+In `site.config.js`:
 
-```html
-data-spline-url="DEIN_SPLINE_EMBED_LINK"
+```js
+hero: {
+  splineUrl: "DEIN_SPLINE_EMBED_LINK"
+}
 ```

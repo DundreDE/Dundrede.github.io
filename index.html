@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jakob | Frontend Engineer & 3D Web Experiences</title>
-  <meta name="description" content="Ich entwickle performante, visuell starke Websites mit Animation und 3D-Fokus.">
-  <meta property="og:title" content="Jakob | Frontend Engineer & 3D Web Experiences">
-  <meta property="og:description" content="Portfolio mit modernen Web-Experiences, Animation und 3D.">
+  <title>Portfolio</title>
+  <meta name="description" content="Modernes Portfolio">
+  <meta property="og:title" content="Portfolio">
+  <meta property="og:description" content="Modernes Portfolio">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="placeholder.jpg">
+  <meta property="og:image" content="placeholder.jpg" id="og-image-meta">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
@@ -17,28 +17,28 @@
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="logo" href="#top">JAKOB.DEV</a>
+    <a class="logo" id="brand-logo" href="#top">JAKOB.DEV</a>
     <nav aria-label="Hauptnavigation">
-      <a href="#projects">Projekte</a>
-      <a href="#services">Leistungen</a>
-      <a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Projekt starten</a>
+      <a id="nav-projects" href="#projects">Projekte</a>
+      <a id="nav-services" href="#services">Leistungen</a>
+      <a id="nav-about" href="#about">About</a>
+      <a id="nav-cta" class="nav-cta" href="#contact">Projekt starten</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero section">
       <div class="hero-content">
-        <p class="eyebrow reveal">Frontend Engineer + Creative Developer</p>
-        <h1 class="reveal">Web Experiences, die auffallen und verkaufen.</h1>
-        <p class="hero-copy reveal">
+        <p id="hero-eyebrow" class="eyebrow reveal">Frontend Engineer + Creative Developer</p>
+        <h1 id="hero-title" class="reveal">Web Experiences, die auffallen und verkaufen.</h1>
+        <p id="hero-copy" class="hero-copy reveal">
           Ich baue schnelle, visuell starke Webseiten mit sauberem Code, präziser Animation und optionaler 3D-Experience.
         </p>
         <div class="hero-actions reveal">
-          <a class="btn btn-primary" href="#contact">Kostenloses Erstgespräch</a>
-          <a class="btn btn-ghost" href="#projects">Arbeiten ansehen</a>
+          <a id="hero-cta-primary" class="btn btn-primary" href="#contact">Kostenloses Erstgespraech</a>
+          <a id="hero-cta-secondary" class="btn btn-ghost" href="#projects">Arbeiten ansehen</a>
         </div>
-        <ul class="metrics reveal">
+        <ul id="metrics-list" class="metrics reveal">
           <li><span>20+</span> Projekte</li>
           <li><span>24h</span> Antwortzeit</li>
           <li><span>95+</span> Lighthouse Ziel</li>
@@ -57,10 +57,10 @@
 
     <section id="projects" class="section projects">
       <div class="section-head reveal">
-        <p class="eyebrow">Featured Work</p>
-        <h2>Ausgewählte Projekte</h2>
+        <p id="projects-eyebrow" class="eyebrow">Featured Work</p>
+        <h2 id="projects-title">Ausgewaehlte Projekte</h2>
       </div>
-      <div class="project-grid">
+      <div id="projects-list" class="project-grid">
         <article class="project-card reveal">
           <img src="Project1.PNG" alt="Projekt 1 Vorschau">
           <div class="project-info">
@@ -94,10 +94,10 @@
 
     <section id="services" class="section services">
       <div class="section-head reveal">
-        <p class="eyebrow">Leistungen</p>
-        <h2>Vom Konzept bis Launch</h2>
+        <p id="services-eyebrow" class="eyebrow">Leistungen</p>
+        <h2 id="services-title">Vom Konzept bis Launch</h2>
       </div>
-      <div class="service-grid">
+      <div id="services-list" class="service-grid">
         <article class="service-card reveal">
           <h3>Frontend Engineering</h3>
           <p>Responsive, performante und wartbare Implementierung mit Fokus auf Business-Ziele.</p>
@@ -115,9 +115,9 @@
 
     <section id="about" class="section about">
       <div class="about-panel reveal">
-        <p class="eyebrow">About</p>
-        <h2>Ich entwickle digitale Auftritte, die technisch und visuell überzeugen.</h2>
-        <p>
+        <p id="about-eyebrow" class="eyebrow">About</p>
+        <h2 id="about-title">Ich entwickle digitale Auftritte, die technisch und visuell ueberzeugen.</h2>
+        <p id="about-copy">
           Mein Fokus liegt auf modernen Frontends, die schnell laden, klar kommunizieren und Nutzer aktiv in eine Handlung führen.
           Ich kombiniere Engineering mit Designverständnis, damit dein Projekt nicht nur funktioniert, sondern im Kopf bleibt.
         </p>
@@ -126,10 +126,10 @@
 
     <section id="contact" class="section contact">
       <div class="contact-box reveal">
-        <p class="eyebrow">Start</p>
-        <h2>Bereit für dein nächstes Projekt?</h2>
-        <p>Schick mir kurz dein Ziel, ich melde mich innerhalb von 24 Stunden.</p>
-        <form class="contact-form" action="mailto:hello@jakob.dev" method="post" enctype="text/plain">
+        <p id="contact-eyebrow" class="eyebrow">Start</p>
+        <h2 id="contact-title">Bereit fuer dein naechstes Projekt?</h2>
+        <p id="contact-copy">Schick mir kurz dein Ziel, ich melde mich innerhalb von 24 Stunden.</p>
+        <form id="contact-form" class="contact-form" action="mailto:hello@jakob.dev" method="post" enctype="text/plain">
           <label>
             Name
             <input type="text" name="name" required>
@@ -142,12 +142,13 @@
             Projektziel
             <textarea name="message" rows="4" required></textarea>
           </label>
-          <button type="submit" class="btn btn-primary">Projekt anfragen</button>
+          <button id="contact-button" type="submit" class="btn btn-primary">Projekt anfragen</button>
         </form>
       </div>
     </section>
   </main>
 
+  <script src="site.config.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" defer></script>
   <script src="scripts.js" defer></script>
 </body>
