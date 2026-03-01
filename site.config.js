@@ -1,12 +1,12 @@
 window.PORTFOLIO_CONFIG = {
   meta: {
-    title: "Jakob | Frontend Engineer & Creative Web Design",
-    description: "Ich entwickle performante, visuell starke Websites mit Animation und klarem Conversion-Fokus.",
-    ogTitle: "Jakob | Frontend Engineer & Creative Web Design",
-    ogDescription: "Portfolio mit modernen Web-Experiences, sauberem Frontend-Code und Conversion-Fokus.",
+    title: "DundreDE | Web Development Portfolio",
+    description: "Ausgewaehlte Projekte von DundreDE mit direkter Anfrage ueber Discord oder E-Mail.",
+    ogTitle: "DundreDE | Web Development Portfolio",
+    ogDescription: "Frontend-Projekte, App-Experimente und direkte Zusammenarbeit ohne Umwege.",
     ogImage: "placeholder.jpg"
   },
-  brand: "JAKOB.DEV",
+  brand: "JAKOB",
   nav: {
     projects: "Projekte",
     services: "Leistungen",
@@ -14,16 +14,16 @@ window.PORTFOLIO_CONFIG = {
     cta: "Projekt starten"
   },
   hero: {
-    eyebrow: "Frontend Engineer + Creative Developer",
-    title: "Web Experiences, die auffallen und verkaufen.",
-    copy: "Ich baue schnelle, visuell starke Webseiten mit sauberem Code, praeziser Animation und klarer Conversion-Strategie.",
-    primaryCta: "Kostenloses Erstgespraech",
-    secondaryCta: "Arbeiten ansehen"
+    eyebrow: "DundreDE - Web Development",
+    title: "Ich baue Websites und Apps, die schnell sind und sauber funktionieren.",
+    copy: "Hier siehst du reale Projekte aus meinem GitHub und kannst mir direkt eine Anfrage schicken.",
+    primaryCta: "Projekte ansehen",
+    secondaryCta: "Discord Anfrage"
   },
   metrics: [
-    { value: "20+", label: "Projekte" },
-    { value: "24h", label: "Antwortzeit" },
-    { value: "95+", label: "Lighthouse Ziel" }
+    { value: "20+", label: "realisierte Projekte" },
+    { value: "24h", label: "bis zur ersten Rueckmeldung" },
+    { value: "95+", label: "Lighthouse-Performance als Ziel" }
   ],
   projects: {
     eyebrow: "Featured Work",
@@ -31,27 +31,27 @@ window.PORTFOLIO_CONFIG = {
     items: [
       {
         image: "Project1.PNG",
-        alt: "Projekt 1 Vorschau",
-        title: "Landing Experience",
-        description: "Conversion-optimierte Landingpage mit Storytelling, Motion und klaren CTAs."
+        alt: "Wettervorhersage App Screenshot",
+        title: "Wettervorhersage App",
+        description: "Responsive Wetter-App mit stuendlicher und taeglicher Vorschau, Dark/Light-Mode und klarer Datenaufbereitung fuer schnelle Entscheidungen."
       },
       {
         image: "Project2.PNG",
-        alt: "Projekt 2 Vorschau",
-        title: "App UI Redesign",
-        description: "Neues Interface mit besserer UX, schnelleren Flows und moderner visueller Sprache."
+        alt: "Unvertraeglichkeits-Pruefer Screenshot",
+        title: "Unvertraeglichkeits-Pruefer",
+        description: "Barcode-basierter Produktcheck fuer Lebensmittel-Unvertraeglichkeiten inklusive Inhaltsstoff-Auswertung und einfacher Ampel-Logik."
       },
       {
         image: "Project3(1).PNG",
-        alt: "Projekt 3 Vorschau",
-        title: "Brand Website",
-        description: "Markenauftritt mit starker Typografie, fein abgestimmter Animation und sauberer Struktur."
+        alt: "Movie Finder und Watchlist Screenshot",
+        title: "Movie Finder & Watchlist",
+        description: "Film-Suchplattform mit Empfehlungen, Detailansicht, IMDb-Bewertung, Streaming-Anbietern und Watchlist-Funktion in einem sauberen UI."
       },
       {
         image: "Project4.PNG",
-        alt: "Projekt 4 Vorschau",
-        title: "Interactive Showcase",
-        description: "Interaktive Produktseite mit Fokus auf Performance und visuelle Wirkung."
+        alt: "To-Do App Screenshot",
+        title: "To-Do App",
+        description: "Task-Management mit Statuswechsel (Done/Undo), Eintraegen mit Bild und klarer CRUD-Struktur fuer alltagsnahe Produktivitaet."
       }
     ]
   },
@@ -82,7 +82,8 @@ window.PORTFOLIO_CONFIG = {
     eyebrow: "Start",
     title: "Bereit fuer dein naechstes Projekt?",
     copy: "Schick mir kurz dein Ziel, ich melde mich innerhalb von 24 Stunden.",
-    email: "hello@jakob.dev",
+    email: "hello@jakobonly.de",
     buttonLabel: "Projekt anfragen"
   }
 };
+

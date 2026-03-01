@@ -135,6 +135,15 @@ function setupReveal() {
             easing: "easeOutExpo",
             delay: (_el, i) => i * 120
         });
+        anime({
+            targets: ".project-card.reveal, .service-card.reveal, .about-panel.reveal, .contact-box.reveal",
+            translateY: [34, 0],
+            opacity: [0, 1],
+            scale: [0.98, 1],
+            duration: 680,
+            easing: "easeOutCubic",
+            delay: (_el, i) => i * 75
+        });
     }
     else {
         markVisible(targets);
@@ -165,7 +174,62 @@ function setupReveal() {
         observer.observe(node);
     });
 }
+function setupScrollProgress() {
+    const progress = document.getElementById("scroll-progress");
+    if (!progress)
+        return;
+    const update = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+        progress.style.width = `${Math.min(Math.max(pct, 0), 100)}%`;
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+}
+function setupHeroParallax() {
+    const panel = document.querySelector(".hero-panel");
+    const wrap = document.querySelector(".hero-visual");
+    if (!panel || !wrap)
+        return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion)
+        return;
+    wrap.addEventListener("mousemove", (event) => {
+        const rect = wrap.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        panel.style.transform = `perspective(900px) rotateY(${x * 7}deg) rotateX(${y * -7}deg) translateY(-2px)`;
+    });
+    wrap.addEventListener("mouseleave", () => {
+        panel.style.transform = "perspective(900px) rotateY(0deg) rotateX(0deg) translateY(0)";
+    });
+}
+function setupAmbientMotion() {
+    const anime = window.anime;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!anime || reducedMotion)
+        return;
+    anime({
+        targets: ".hero-panel",
+        translateY: [0, -6, 0],
+        duration: 4200,
+        easing: "easeInOutSine",
+        loop: true
+    });
+    anime({
+        targets: ".orb-glow",
+        opacity: [0.55, 0.95, 0.55],
+        scale: [0.96, 1.04, 0.96],
+        duration: 3600,
+        easing: "easeInOutSine",
+        loop: true
+    });
+}
 document.addEventListener("DOMContentLoaded", () => {
     applyConfig();
     setupReveal();
+    setupScrollProgress();
+    setupHeroParallax();
+    setupAmbientMotion();
 });

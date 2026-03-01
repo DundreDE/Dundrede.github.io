@@ -15,126 +15,128 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="bg-aurora bg-aurora-a" aria-hidden="true"></div>
+  <div class="bg-aurora bg-aurora-b" aria-hidden="true"></div>
   <div class="bg-grid" aria-hidden="true"></div>
   <header class="site-header">
     <a class="logo" id="brand-logo" href="#top">JAKOB.DEV</a>
     <nav aria-label="Hauptnavigation">
-      <a id="nav-projects" href="#projects">Projekte</a>
-      <a id="nav-services" href="#services">Leistungen</a>
-      <a id="nav-about" href="#about">About</a>
-      <a id="nav-cta" class="nav-cta" href="#contact">Projekt starten</a>
+      <a href="#projects">Projekte</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Anfrage senden</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero section">
       <div class="hero-content">
-        <p id="hero-eyebrow" class="eyebrow reveal">Frontend Engineer + Creative Developer</p>
-        <h1 id="hero-title" class="reveal">Web Experiences, die auffallen und verkaufen.</h1>
-        <p id="hero-copy" class="hero-copy reveal">
-          Ich baue schnelle, visuell starke Webseiten mit sauberem Code, praeziser Animation und klarer Conversion-Strategie.
+        <p class="eyebrow reveal">DundreDE - Web Development</p>
+        <h1 class="reveal">Ich baue Websites und Apps, die schnell sind und sauber funktionieren.</h1>
+        <p class="hero-copy reveal">
+          Kein Baukasten-Standard. Hier siehst du reale Projekte aus meinem GitHub und kannst mir direkt eine Anfrage per Discord schicken.
         </p>
         <div class="hero-actions reveal">
-          <a id="hero-cta-primary" class="btn btn-primary" href="#contact">Kostenloses Erstgespraech</a>
-          <a id="hero-cta-secondary" class="btn btn-ghost" href="#projects">Arbeiten ansehen</a>
+          <a class="btn btn-primary" href="#projects">Projekte ansehen</a>
+          <a class="btn btn-ghost" href="#contact">Discord Anfrage</a>
         </div>
-        <ul id="metrics-list" class="metrics reveal">
-          <li><span>20+</span> Projekte</li>
-          <li><span>24h</span> Antwortzeit</li>
-          <li><span>95+</span> Lighthouse Ziel</li>
+        <ul class="metrics reveal">
+          <li><span>4+</span> Projekte live</li>
+          <li><span>24h</span> Rueckmeldung</li>
+          <li><span>Clean Code</span> Fokus</li>
         </ul>
+        <div class="trust-strip reveal" aria-label="Vertrauensindikatoren">
+          <p><strong>GitHub-basiert</strong> echte Projektarbeit</p>
+          <p><strong>Direkter Kontakt</strong> ohne Agentur-Overhead</p>
+          <p><strong>Schneller Start</strong> nach kurzer Absprache</p>
+        </div>
       </div>
       <div class="hero-visual reveal">
         <div class="orb-glow" aria-hidden="true"></div>
         <div class="hero-panel">
-          <img src="neues LOGO.jpg" alt="Jakob Logo" class="hero-logo">
+          <img src="neues LOGO.jpg" alt="Logo" class="hero-logo">
           <div class="hero-panel-copy">
-            <p class="hero-panel-label">Aktuell verfuegbar</p>
-            <h3>Design + Code aus einer Hand</h3>
+            <p class="hero-panel-label">Verfuegbar fuer neue Projekte</p>
+            <h3>Von Idee zu funktionierendem Produkt.</h3>
             <ul class="hero-points">
-              <li>Landingpages mit klarer Conversion-Fuehrung</li>
-              <li>Saubere Frontend-Architektur</li>
-              <li>Schnelle Umsetzung und enge Abstimmung</li>
+              <li>Frontend und UX mit klarem Ziel</li>
+              <li>Responsive Umsetzung fuer alle Geraete</li>
+              <li>Technisch sauberer und wartbarer Code</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section projects">
+    <section class="section projects" id="projects">
       <div class="section-head reveal">
-        <p id="projects-eyebrow" class="eyebrow">Featured Work</p>
-        <h2 id="projects-title">Ausgewaehlte Projekte</h2>
+        <p class="eyebrow">Projekte</p>
+        <h2>Ausgewaehlte Arbeiten von github.com/DundreDE</h2>
       </div>
-      <div id="projects-list" class="project-grid">
+      <div class="project-grid">
         <article class="project-card reveal">
-          <img src="Project1.PNG" alt="Projekt 1 Vorschau" loading="lazy" decoding="async">
+          <img src="Project1.PNG" alt="Wettervorhersage App Screenshot" loading="lazy" decoding="async">
           <div class="project-info">
-            <h3>Landing Experience</h3>
-            <p>Conversion-optimierte Landingpage mit Storytelling, Motion und klaren CTAs.</p>
+            <h3>Wettervorhersage App</h3>
+            <p>Responsive Wetter-App mit stuendlicher und taeglicher Vorschau, Dark/Light-Mode und klarer Datenaufbereitung.</p>
+            <div class="project-actions">
+              <a class="btn btn-ghost" href="https://github.com/DundreDE" target="_blank" rel="noopener noreferrer">GitHub ansehen</a>
+            </div>
           </div>
         </article>
         <article class="project-card reveal">
-          <img src="Project2.PNG" alt="Projekt 2 Vorschau" loading="lazy" decoding="async">
+          <img src="Project2.PNG" alt="Unvertraeglichkeits-Pruefer Screenshot" loading="lazy" decoding="async">
           <div class="project-info">
-            <h3>App UI Redesign</h3>
-            <p>Neues Interface mit besserer UX, schnelleren Flows und moderner visueller Sprache.</p>
+            <h3>Unvertraeglichkeits-Pruefer</h3>
+            <p>Barcode-basierter Produktcheck fuer Lebensmittel-Unvertraeglichkeiten mit Ampel-Logik und Inhaltsstoff-Auswertung.</p>
+            <div class="project-actions">
+              <a class="btn btn-ghost" href="https://github.com/DundreDE" target="_blank" rel="noopener noreferrer">GitHub ansehen</a>
+            </div>
           </div>
         </article>
         <article class="project-card reveal">
-          <img src="Project3(1).PNG" alt="Projekt 3 Vorschau" loading="lazy" decoding="async">
+          <img src="Project3(1).PNG" alt="Movie Finder und Watchlist Screenshot" loading="lazy" decoding="async">
           <div class="project-info">
-            <h3>Brand Website</h3>
-            <p>Markenauftritt mit starker Typografie, fein abgestimmter Animation und sauberer Struktur.</p>
+            <h3>Movie Finder & Watchlist</h3>
+            <p>Film-Suche mit Empfehlungen, Detailansicht, IMDb-Bewertung, Streaming-Anbietern und Watchlist-Funktion.</p>
+            <div class="project-actions">
+              <a class="btn btn-ghost" href="https://github.com/DundreDE" target="_blank" rel="noopener noreferrer">GitHub ansehen</a>
+            </div>
           </div>
         </article>
         <article class="project-card reveal">
-          <img src="Project4.PNG" alt="Projekt 4 Vorschau" loading="lazy" decoding="async">
+          <img src="Project4.PNG" alt="To-Do App Screenshot" loading="lazy" decoding="async">
           <div class="project-info">
-            <h3>Interactive Showcase</h3>
-            <p>Interaktive Produktseite mit Fokus auf Performance und visuelle Wirkung.</p>
+            <h3>To-Do App</h3>
+            <p>Task-Management mit Statuswechsel, Bild-Upload und klarer CRUD-Struktur fuer alltagsnahe Produktivitaet.</p>
+            <div class="project-actions">
+              <a class="btn btn-ghost" href="https://github.com/DundreDE" target="_blank" rel="noopener noreferrer">GitHub ansehen</a>
+            </div>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="services" class="section services">
-      <div class="section-head reveal">
-        <p id="services-eyebrow" class="eyebrow">Leistungen</p>
-        <h2 id="services-title">Vom Konzept bis Launch</h2>
-      </div>
-      <div id="services-list" class="service-grid">
-        <article class="service-card reveal">
-          <h3>Frontend Engineering</h3>
-          <p>Responsive, performante und wartbare Implementierung mit Fokus auf Business-Ziele.</p>
-        </article>
-        <article class="service-card reveal">
-          <h3>Animation & Motion</h3>
-          <p>Anime.js basierte Übergänge und Interaktionen, die Blickführung und Qualität erhöhen.</p>
-        </article>
-        <article class="service-card reveal">
-          <h3>UI Systems</h3>
-          <p>Wiederverwendbare Komponenten und klare Strukturen fuer konsistente, skalierbare Seiten.</p>
         </article>
       </div>
     </section>
 
     <section id="about" class="section about">
       <div class="about-panel reveal">
-        <p id="about-eyebrow" class="eyebrow">About</p>
-        <h2 id="about-title">Ich entwickle digitale Auftritte, die technisch und visuell ueberzeugen.</h2>
-        <p id="about-copy">
-          Mein Fokus liegt auf modernen Frontends, die schnell laden, klar kommunizieren und Nutzer aktiv in eine Handlung führen.
-          Ich kombiniere Engineering mit Designverständnis, damit dein Projekt nicht nur funktioniert, sondern im Kopf bleibt.
+        <p class="eyebrow">About</p>
+        <h2>Ich entwickle moderne Frontends mit Fokus auf Performance, UX und klare Nutzerfuehrung.</h2>
+        <p>
+          Mein Stack ist auf saubere, wartbare und schnelle Webprojekte ausgerichtet. Wenn du eine neue Website, ein Redesign
+          oder ein konkretes Feature brauchst, koennen wir direkt ueber Discord starten.
         </p>
       </div>
     </section>
 
     <section id="contact" class="section contact">
       <div class="contact-box reveal">
-        <p id="contact-eyebrow" class="eyebrow">Start</p>
-        <h2 id="contact-title">Bereit fuer dein naechstes Projekt?</h2>
-        <p id="contact-copy">Schick mir kurz dein Ziel, ich melde mich innerhalb von 24 Stunden.</p>
+        <p class="eyebrow">Anfrage</p>
+        <h2>Schreib mir direkt auf Discord</h2>
+        <p>Schnellster Weg: Discord. Alternativ kannst du auch per Mail anfragen.</p>
+        <div class="contact-direct">
+          <a class="btn btn-primary" href="https://discord.com/app" target="_blank" rel="noopener noreferrer">Discord oeffnen</a>
+          <a class="btn btn-ghost" href="https://github.com/DundreDE" target="_blank" rel="noopener noreferrer">GitHub Profil</a>
+        </div>
         <form id="contact-form" class="contact-form" action="mailto:hello@jakob.dev" method="post" enctype="text/plain">
           <label>
             Name
@@ -145,10 +147,14 @@
             <input type="email" name="email" required>
           </label>
           <label>
-            Projektziel
+            Discord Username
+            <input type="text" name="discord" required>
+          </label>
+          <label>
+            Projektanfrage
             <textarea name="message" rows="4" required></textarea>
           </label>
-          <button id="contact-button" type="submit" class="btn btn-primary">Projekt anfragen</button>
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
         </form>
       </div>
     </section>
@@ -159,3 +165,4 @@
   <script src="scripts.js" defer></script>
 </body>
 </html>
+
